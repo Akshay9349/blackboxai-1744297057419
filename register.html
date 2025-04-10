@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass Manager - Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="flex min-h-screen">
+        <!-- Left side with image -->
+        <div class="hidden lg:flex lg:w-1/2 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+            <div class="w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-white text-center px-8">
+                    <h1 class="text-4xl font-bold mb-4">Join SecurePass Manager</h1>
+                    <p class="text-xl">Create your account to start managing passwords securely</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side with registration form -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-8">
+            <div class="max-w-md w-full">
+                <!-- Logo for mobile -->
+                <div class="lg:hidden text-center mb-8">
+                    <h1 class="text-3xl font-bold text-gray-800">SecurePass Manager</h1>
+                    <p class="text-gray-600 mt-2">Create your account</p>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Create Your Account</h2>
+                    
+                    <form id="registerForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">
+                                Email Address
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                       id="email" 
+                                       type="email" 
+                                       required
+                                       placeholder="Enter your email">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="password">
+                                Password
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                       id="password" 
+                                       type="password" 
+                                       required
+                                       placeholder="Create a strong password">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2" for="confirmPassword">
+                                Confirm Password
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                       id="confirmPassword" 
+                                       type="password" 
+                                       required
+                                       placeholder="Confirm your password">
+                            </div>
+                        </div>
+
+                        <div id="errorMessage" class="hidden text-red-500 text-sm text-center"></div>
+
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300">
+                            Create Account
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">
+                            Already have an account? 
+                            <a href="index.html" class="text-blue-600 hover:text-blue-700 font-semibold">
+                                Login here
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Security Notice -->
+                <div class="mt-8 text-center text-sm text-gray-500">
+                    <p>🔒 Your data is encrypted and stored securely</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
